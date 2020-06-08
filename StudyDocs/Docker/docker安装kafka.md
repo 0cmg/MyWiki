@@ -24,7 +24,7 @@ docker exec -it kafka /bin/sh
 ```
 + 运行kafka生产者发送消息
 ```
-./kafka-console-producer.sh --broker-list localhost:9092 --topic sun
+../../kafka-console-producer.sh --broker-list localhost:9092 --topic sun
 ```
 发送消息
 ```
