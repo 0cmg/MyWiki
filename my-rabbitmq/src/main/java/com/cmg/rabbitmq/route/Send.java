@@ -22,8 +22,8 @@ public class Send {
         channel.exchangeDeclare(EXCHANGE_NAME,"direct");
 
         //消息内容
-        String message = "删除商品";
-        channel.basicPublish(EXCHANGE_NAME,"delete",null,message.getBytes());
+        String message = "新增商品";
+        channel.basicPublish(EXCHANGE_NAME,"insert",null,message.getBytes());
         System.out.println("[x] Sent'" + message + "'");
 
         channel.close();

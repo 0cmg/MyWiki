@@ -6,13 +6,13 @@ import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.QueueingConsumer;
 
 /**
- * @ClassName Recv
+ * @ClassName Recv2
  * @Author cmg
- * @Date 2020/6/17 18:34
+ * @Date 2020/6/18 8:44
  * @Description TODO
  **/
-public class Recv {
-    private final static String QUEUE_NAME = "test_queue_direct_1";
+public class Recv2 {
+    private final static String QUEUE_NAME = "test_queue_direct_2";
     private final static String EXCHANGE_NAME = "test_exchange_direct";
 
     public static void main(String[] args) throws Exception{
@@ -24,6 +24,7 @@ public class Recv {
         channel.queueDeclare(QUEUE_NAME,false,false,false,null);
 
         //绑定队列到交换机
+        channel.queueBind(QUEUE_NAME,EXCHANGE_NAME,"insert");
         channel.queueBind(QUEUE_NAME,EXCHANGE_NAME,"update");
         channel.queueBind(QUEUE_NAME,EXCHANGE_NAME,"delete");
 
@@ -39,7 +40,7 @@ public class Recv {
         while (true) {
             QueueingConsumer.Delivery delivery = consumer.nextDelivery();
             String message = new String(delivery.getBody());
-            System.out.println(" [Recv] Received '" + message + "'");
+            System.out.println(" [Recv2] Received '" + message + "'");
             channel.basicAck(delivery.getEnvelope().getDeliveryTag(), false);
         }
     }
