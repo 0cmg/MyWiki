@@ -6,6 +6,10 @@
 
     <groupId>com.cmg</groupId>
     <artifactId>mywiki</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>my-redis</module>
+    </modules>
 
 </project>
