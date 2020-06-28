@@ -1,4 +1,5 @@
 package com.cmg.rabbitmq.util;
+import	java.sql.Connection;
 
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
@@ -9,8 +10,17 @@ import com.rabbitmq.client.ConnectionFactory;
  * @Describe TODO
  */
 public class ConnectionUtil {
-
+    /**
+     * @Name ConnectionUtil.getConnection
+     * @Author cmg
+     * @Params
+     * @Return {@link Connection}
+     * @throws
+     * @date 2020/6/28 21:50
+     * Description TODO
+     **/
     public static Connection getConnection() throws Exception{
+
         //定义连接工厂
         ConnectionFactory factory = new ConnectionFactory();
         //设置服务器地址
