@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+       xmlns:context="http://www.springframework.org/schema/context">
+    <!--引入redis.properties文件-->
+    <context:property-placeholder location="classpath:redis.properties"/>
+    <!--配置连接池信息-->
+    <bean class="redis.clients.jedis.JedisPoolConfig" id="poolConfig">
+        <property name="maxIdle" value="${redis.maxIdle}"/>
+        <property name="maxTotal" value="${redis.maxTotal}"/>
+        <property name="maxWaitMillis" value="${redis.maxWait}"/>
+        <property name="testOnBorrow" value="${redis.testOnBorrow}"/>
+    </bean>
+    <!--配置基本连接信息-->
+    <bean class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory" id="connectionFactory">
+        <property name="hostName" value="${redis.host}"/>
+        <property name="port" value="${redis.port}"/>
+        <property name="poolConfig" ref="poolConfig"/>
+    </bean>
+    <!--配置RedisTemplate-->
+    <bean class="org.springframework.data.redis.core.RedisTemplate" id="redisTemplate">
+        <property name="connectionFactory" ref="connectionFactory"/>
+        <!--key和value要进行序列化，否则存储对象时会出错-->
+        <property name="keySerializer">
+            <bean class="org.springframework.data.redis.serializer.StringRedisSerializer"/>
+        </property>
+        <property name="valueSerializer">
+            <bean class="org.springframework.data.redis.serializer.JdkSerializationRedisSerializer"/>
+        </property>
+    </bean>
+</beans>

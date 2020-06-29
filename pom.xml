@@ -11,6 +11,7 @@
     <modules>
         <module>my-redis</module>
         <module>my-Javabase</module>
+        <module>my-rabbitmq</module>
     </modules>
 
 </project>
