@@ -1,5 +1,4 @@
 package com.cmg.rabbitmq.util;
-import	java.sql.Connection;
 
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
