@@ -25,7 +25,7 @@ import java.io.*;
 public class WordToHtml {
     public static void main(String argv[]) {
         try {
-            convert2Html("c:\\file\\开发文档\\上海农商行\\打印\\表单一《上海农商银行人民币贵金属即期交易审批书》.doc","c:\\file\\开发文档\\上海农商行\\打印\\表单一《上海农商银行人民币贵金属即期交易审批书》.html");
+            convert2Html("c:\\file\\开发文档\\上海农商行\\打印\\拆借机打单据.docx","c:\\file\\开发文档\\上海农商行\\打印\\拆借机打单据.html");
         } catch (Exception e) {
             e.printStackTrace();
         }
