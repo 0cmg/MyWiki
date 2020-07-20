@@ -1,0 +1,1 @@
+mvn install:install-file -Dfile=com.ibm.mq.jmqi.jar -DgroupId=com.ibm.mq -DartifactId=ibm-jmqi -Dversion=1.0.0 -Dpackaging=jar  

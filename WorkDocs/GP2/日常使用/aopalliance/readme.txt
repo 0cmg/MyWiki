@@ -1,0 +1,1 @@
+mvn install:install-file -Dfile=aopalliance-1.0.jar -DgroupId=aopalliance -DartifactId=aopalliance -Dversion=1.0 -Dpackaging=jar  

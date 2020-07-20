@@ -1,0 +1,1 @@
+mvn install:install-file -Dfile=ecif2dubbo-core-api-1.15-RELEASE.jar -DgroupId=cn.com.git.ecif -DartifactId=ecif2dubbo-core-api -Dversion=1.15-RELEASE -Dpackaging=jar  

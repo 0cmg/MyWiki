@@ -1,0 +1,1 @@
+mvn install:install-file -Dfile=ojdbc7-1.0.0.jar -DgroupId=com.kingstar -DartifactId=ojdbc7 -Dversion=1.0.0 -Dpackaging=jar

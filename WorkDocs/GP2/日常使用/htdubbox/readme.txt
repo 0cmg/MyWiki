@@ -1,0 +1,1 @@
+mvn install:install-file -Dfile=htdubbox-1.2.0-SNAPSHOT.jar -DgroupId=cn.com.htsc -DartifactId=htdubbox -Dversion=1.2.0-SNAPSHOT -Dpackaging=jar  

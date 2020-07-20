@@ -1,0 +1,1 @@
+mvn install:install-file -Dfile=PDFjet-1.0.0.jar -DgroupId=com.kingstar.PDFjet -DartifactId=PDFjet -Dversion=1.0.0 -Dpackaging=jar

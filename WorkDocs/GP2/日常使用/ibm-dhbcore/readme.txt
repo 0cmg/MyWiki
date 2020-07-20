@@ -1,0 +1,1 @@
+mvn install:install-file -Dfile=com.ibm.dhbcore.jar -DgroupId=com.ibm.mq -DartifactId=ibm-dhbcore -Dversion=1.0.0 -Dpackaging=jar

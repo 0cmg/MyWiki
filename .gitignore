@@ -31,3 +31,7 @@ hs_err_pid*
 /my-Javabase/target/classes/single.properties
 /.idea/uiDesigner.xml
 /.idea/vcs.xml
+/excel-to-pdf/.idea/
+/excel2pdf/.gitignore
+/excel2pdf/.idea/
+/excel2pdf/.github/

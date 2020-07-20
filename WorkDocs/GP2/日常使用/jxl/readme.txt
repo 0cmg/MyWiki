@@ -1,0 +1,1 @@
+mvn install:install-file -Dfile=jxl-1.0.0.jar -DgroupId=com.kingstar.jxl -DartifactId=jxl -Dversion=1.0.0 -Dpackaging=jar

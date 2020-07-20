@@ -1,0 +1,1 @@
+mvn install:install-file -Dfile=fastjson-1.2.68.jar -DgroupId=com.alibaba -DartifactId=fastjson -Dversion=1.2.68 -Dpackaging=jar

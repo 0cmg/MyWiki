@@ -1,0 +1,1 @@
+mvn install:install-file -Dfile=jacob-1.10.jar -DgroupId=com.jacob -DartifactId=jacob -Dversion=1.10 -Dpackaging=jar

@@ -1,0 +1,1 @@
+mvn install:install-file -Dfile=aspose-cells-8.5.2.jar -DgroupId=com.Jcraft -DartifactId=aspose-cells  -Dversion=1.25 -Dpackaging=jar
