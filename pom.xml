@@ -94,5 +94,6 @@
         <module>my-rabbitmq</module>
         <module>excel2pdf</module>
         <module>excel-to-pdf</module>
+        <module>demo-myrpc</module>
     </modules>
 </project>
