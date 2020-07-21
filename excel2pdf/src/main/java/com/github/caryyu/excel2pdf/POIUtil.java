@@ -56,7 +56,7 @@ public class POIUtil {
         }
 
         if (red != 0 || green != 0 || blue != 0) {
-//            result = new Color(red, green, blue).getRGB();
+//             result = new Color(red, green, blue).getRGB();
         }
 
         return result;
