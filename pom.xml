@@ -7,7 +7,7 @@
     <groupId>com.cmg</groupId>
     <artifactId>mywiki</artifactId>
     <packaging>pom</packaging>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -92,8 +92,8 @@
         <module>my-redis</module>
         <module>my-Javabase</module>
         <module>my-rabbitmq</module>
-        <module>excel2pdf</module>
-        <module>excel-to-pdf</module>
-        <module>demo-myrpc</module>
+        <module>my-exceltopdf1</module>
+        <module>my-exceltopdf2</module>
+        <module>my-rpc</module>
     </modules>
 </project>
