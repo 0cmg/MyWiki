@@ -7,8 +7,14 @@ package com.cmg.rpc.config;
  * @Desciption TODO
  **/
 public class ConsumerConfig<T> {
-    private String nozzle; //接口
-    private String alias;  //别名
+    /**
+     * 接口
+     */
+    private String nozzle;
+    /**
+     * 别名
+     */
+    private String alias;
 
     //动态代理链接
     protected synchronized T refer() {
