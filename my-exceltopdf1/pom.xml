@@ -10,8 +10,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.github.caryyu</groupId>
-    <artifactId>excel2pdf</artifactId>
-    <name>excel2pdf</name>
+    <artifactId>my-exceltopdf1</artifactId>
+    <name>my-exceltopdf1</name>
     <packaging>jar</packaging>
     <version>1.0</version>
     <description>An easy way to convert Excel to PDF by Java code based on Apache POI and itextpdf.</description>
