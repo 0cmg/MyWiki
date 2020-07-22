@@ -5,14 +5,14 @@
     <parent>
         <artifactId>mywiki</artifactId>
         <groupId>com.cmg</groupId>
-        <version>1.0</version>
+        <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>uk.co.certa.it</groupId>
     <artifactId>my-exceltopdf2</artifactId>
-    <name>my-exceltopdf2</name>
     <version>1.0</version>
+    <name>my-exceltopdf2</name>
     <packaging>jar</packaging>
 
     <properties>

@@ -94,6 +94,5 @@
         <module>my-rabbitmq</module>
         <module>my-exceltopdf1</module>
         <module>my-exceltopdf2</module>
-        <module>my-rpc</module>
     </modules>
 </project>
