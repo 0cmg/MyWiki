@@ -1,4 +1,4 @@
-package com.cmg.springboot.service;
+package com.cmg.javabase.mysql.service;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import org.springframework.beans.factory.annotation.Value;
@@ -10,34 +10,34 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import javax.sql.DataSource;
 
 /**
- * @Name MyWiki com.cmg.springboot.service
+ * @Name MyWiki com.cmg.javabase.mysql.service
  * @Author cmg
- * @date 2020/8/9 16:20
+ * @date 2020/8/11 21:27
  * @Description TODO
  **/
 @Configuration
-@PropertySource(value = "classpath:db.properties")
-public class JDBCTempleteConfig {
+@PropertySource(value = ("classpath:db.properties"))
+public class JdbcTemplateConfiguration {
     @Value("${jdbcDriverClassName}")
-    String jdbcDriverClassName;
+    private String jdbcDriverClassName;
 
     @Value("${jdbcUrl}")
-    String jdbcUrl;
+    private String jdbcUrl;
 
     @Value("${jdbcUserName}")
-    String jdbcUserName;
+    private String jdbcUserName;
 
     @Value("${jdbcPassWord}")
-    String jdbcPassWord;
+    private String jdbcPassWord;
 
     @Bean
     public DataSource dataSource(){
-        DruidDataSource dataSource = new DruidDataSource();
-        dataSource.setDriverClassName(jdbcDriverClassName);
-        dataSource.setUrl(jdbcUrl);
-        dataSource.setUsername(jdbcUserName);
-        dataSource.setPassword(jdbcPassWord);
-        return dataSource;
+        DruidDataSource druidDataSource = new DruidDataSource();
+        druidDataSource.setDriverClassName(jdbcDriverClassName);
+        druidDataSource.setUrl(jdbcUrl);
+        druidDataSource.setUsername(jdbcUserName);
+        druidDataSource.setPassword(jdbcPassWord);
+        return druidDataSource;
     }
 
     @Bean

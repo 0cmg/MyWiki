@@ -1,9 +1,9 @@
-package com.cmg.springboot.entity;
+package com.cmg.javabase.mysql.entity;
 
 /**
- * @Name MyWiki com.cmg.springboot.entity
+ * @Name MyWiki com.cmg.javabase.mysql.entity
  * @Author cmg
- * @date 2020/8/9 20:25
+ * @date 2020/8/11 21:41
  * @Description TODO
  **/
 public class User {
