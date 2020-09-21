@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="DAO.SingleTransMapper">
+    <select id="selectSingleByClass" resultType="DTO.SingletransDTO">
+        select * from se_singletrans where transno = #{TransNo} and commandcode= #{CommandCode}
+    </select>
+
+    <insert id="insert" parameterType="DTO.SingletransDTO">
+        insert into se_singletrans(enterprisenum,transno,commandcode,state) values(#{EnterpriseNum},#{TransNo},#{CommandCode},#{State})
+    </insert>
+
+    <update id="update" parameterType="DTO.SingletransDTO">
+        update se_singletrans
+        <set>
+            <if test="State != null and State!=''"></if>
+            STATE=#{State}
+        </set>
+        where transno = #{TransNo} and commandcode= #{CommandCode}
+    </update>
+
+    <delete id="delete">
+        delete from se_singletrans where transno = #{TransNo} and commandcode= #{CommandCode}
+    </delete>
+</mapper>
