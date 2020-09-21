@@ -28,5 +28,8 @@
     </environments>
     <mappers>
         <mapper resource="singleTransMapper.xml" />
+        <mapper resource="selectSingleByClass.xml" />
+        <mapper resource="selectSingleByMultCondition.xml" />
+        <mapper resource="selectSingleByParam.xml" />
     </mappers>
 </configuration>
