@@ -6,4 +6,21 @@
     <select id="selectSingleByClass" resultType="DTO.SingletransDTO">
         select * from se_singletrans where transno = #{TransNo} and commandcode= #{CommandCode}
     </select>
+
+    <insert id="insert" parameterType="DTO.SingletransDTO">
+        insert into se_singletrans(enterprisenum,transno,commandcode,state) values(#{EnterpriseNum},#{TransNo},#{CommandCode},#{State})
+    </insert>
+
+    <update id="update" parameterType="DTO.SingletransDTO">
+        update se_singletrans
+        <set>
+            <if test="State != null and State!=''"></if>
+            STATE=#{State}
+        </set>
+        where transno = #{TransNo} and commandcode= #{CommandCode}
+    </update>
+
+    <delete id="delete">
+        delete from se_singletrans where transno = #{TransNo} and commandcode= #{CommandCode}
+    </delete>
 </mapper>
