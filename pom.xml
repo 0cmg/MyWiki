@@ -93,5 +93,6 @@
         <module>my-Javabase</module>
         <module>my-rabbitmq</module>
         <module>my-rpc</module>
+        <module>my-mybatis</module>
     </modules>
 </project>
