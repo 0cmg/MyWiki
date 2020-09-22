@@ -1,6 +1,5 @@
 package com.cmg.javabase.utils;
 
-import net.sf.jxls.transformer.Workbook;
 import net.sf.jxls.transformer.XLSTransformer;
 
 import java.io.*;
@@ -15,8 +14,8 @@ import java.util.*;
  **/
 public class ExportExcel2 {
     public static void main(String[] args) throws Exception {
-        String templateFileName = "c:\\file\\开发文档\\上海农商行\\打印\\temp2.xls";
-        String destFileName = "c:\\file\\开发文档\\上海农商行\\打印\\out2.xls";
+        String templateFileName = "c:\\file\\开发文档\\上海农商行\\打印\\temp4.xlsx";
+        String destFileName = "c:\\file\\开发文档\\上海农商行\\打印\\out2.xlsx";
 
         File file = new File(destFileName);
         if(file.exists()){
