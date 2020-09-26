@@ -25,12 +25,27 @@ public class ExportExcel {
         beans.put("list", list);
         exportExcelTemplate(templateFileName,beans,destFileName);
     }
-
+    /**
+     * @Description:模版导出excel
+     * @param templateFile
+     * @param beans
+     * @param destFile
+     * @return: void
+     * @Author: cmg
+     * @Date: 2020/9/26 9:49
+     */
     public static void exportExcelTemplate(String templateFile, Map<String, Object> beans, String destFile ) throws IOException, InvalidFormatException {
         XLSTransformer transformer = new XLSTransformer();
         transformer.transformXLS(templateFile, beans, destFile);
     }
 
+    /**
+     * @Description:准备数据
+     * @param
+     * @return: java.util.List<java.util.Map<java.lang.String,java.lang.Object>>
+     * @Author: cmg
+     * @Date: 2020/9/26 9:48
+     */
     public static List<Map<String,Object>> prepareData(){
         List<Map<String,Object>> list = new ArrayList<Map<String,Object>>();
         Map<String, Object> params = new HashMap<String,Object>();
