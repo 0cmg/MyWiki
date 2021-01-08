@@ -5,6 +5,6 @@
 	  http://rpc.itstack.org/schema/rpc http://rpc.itstack.org/schema/rpc/rpc.xsd">
 
     <rpc:provider id="provider_helloService" nozzle="com.cmg.test.service.HelloService"
-                  ref="helloService" alias="itStackRpc" />
+                  ref="helloService" alias="itStackRpc"/>
 
 </beans>

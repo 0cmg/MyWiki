@@ -13,7 +13,7 @@ public class Exam4 {
         int i = 1;
         String str = "hello";
         Integer num = 200;
-        int[] arr = {1,2,3,4,5};
+        int[] arr = {1, 2, 3, 4, 5};
         MyData my = new MyData();
         change(i, str, num, arr, my);
 
@@ -24,7 +24,8 @@ public class Exam4 {
         System.out.println("my.a= " + my.a);
 
     }
-    public static void change(int j, String s, Integer n, int[] a, MyData m){
+
+    public static void change(int j, String s, Integer n, int[] a, MyData m) {
         j += 1;
         s += "world";
         n += 1;
@@ -32,6 +33,7 @@ public class Exam4 {
         m.a += 1;
     }
 }
-class MyData{
+
+class MyData {
     int a = 10;
 }

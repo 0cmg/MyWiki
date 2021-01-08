@@ -10,18 +10,22 @@ import org.springframework.stereotype.Repository;
 public class HelloDao {
     @Autowired
     RedisTemplate redisTemplate;
+
     public void set(String key, String value) {
         ValueOperations ops = redisTemplate.opsForValue();
         ops.set(key, value);
     }
+
     public String get(String key) {
         ValueOperations ops = redisTemplate.opsForValue();
         return ops.get(key).toString();
     }
+
     public void setuser(User user) {
         ValueOperations ops = redisTemplate.opsForValue();
         ops.set(user.getId(), user);
     }
+
     public User getuser(String id) {
         ValueOperations<String, User> ops = redisTemplate.opsForValue();
         User user = ops.get(id);

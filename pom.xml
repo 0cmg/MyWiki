@@ -94,5 +94,6 @@
         <module>my-rabbitmq</module>
         <module>my-rpc</module>
         <module>my-mybatis</module>
+        <module>my-pdf</module>
     </modules>
 </project>

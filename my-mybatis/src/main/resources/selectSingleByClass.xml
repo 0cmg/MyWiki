@@ -8,7 +8,8 @@
     </select>
 
     <insert id="insert" parameterType="DTO.SingletransDTO">
-        insert into se_singletrans(enterprisenum,transno,commandcode,state) values(#{EnterpriseNum},#{TransNo},#{CommandCode},#{State})
+        insert into se_singletrans(enterprisenum,transno,commandcode,state)
+        values(#{EnterpriseNum},#{TransNo},#{CommandCode},#{State})
     </insert>
 
     <update id="update" parameterType="DTO.SingletransDTO">

@@ -9,9 +9,9 @@ package com.cmg.javabase.singleton.lazy;
 
 /**
  * 枚举类型，表示该类型的对象是有限的几个
- *  我们可以限定为一个，就成了单例
- *  最简洁
+ * 我们可以限定为一个，就成了单例
+ * 最简洁
  */
-public enum  Singleton2 {
+public enum Singleton2 {
     INSTANCE
 }

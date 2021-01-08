@@ -21,9 +21,9 @@ public class ProviderConfig {
      * @Return
      * @Date 2020/7/21 16:46
      * @Version 1.0.0
-     * @Description  发布
+     * @Description 发布
      **/
-    protected void doExport(){
+    protected void doExport() {
         System.out.format("生产者信息=> [接口:%s] [映射:%s] [别名:%s]\r\n", nozzle, ref, alias);
     }
 
