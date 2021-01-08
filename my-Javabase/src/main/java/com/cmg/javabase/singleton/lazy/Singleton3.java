@@ -1,6 +1,7 @@
 package com.cmg.javabase.singleton.lazy;
+
 import java.io.IOException;
-import	java.util.Properties;
+import java.util.Properties;
 
 /**
  * @Name MyWiKi com.cmg.javabase
@@ -33,7 +34,8 @@ public class Singleton3 {
             throw new RuntimeException(e);
         }
     }
-    private Singleton3(String info){
+
+    private Singleton3(String info) {
         this.info = info;
     }
 

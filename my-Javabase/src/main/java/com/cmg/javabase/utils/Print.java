@@ -10,7 +10,8 @@ public class Print {
     private String name;
     private String sex;
     private int age;
-    public Print(String name, String sex, int age){
+
+    public Print(String name, String sex, int age) {
         this.name = name;
         this.sex = sex;
         this.age = age;

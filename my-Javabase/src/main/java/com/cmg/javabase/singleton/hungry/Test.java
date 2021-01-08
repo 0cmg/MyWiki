@@ -1,4 +1,5 @@
 package com.cmg.javabase.singleton.hungry;
+
 import java.util.concurrent.*;
 
 import java.util.concurrent.Callable;
@@ -17,7 +18,7 @@ public class Test {
 //        System.out.println(s2);
 //        System.out.println(s1 == s2);
 
-        Callable<Singleton2> c = new Callable<Singleton2> () {
+        Callable<Singleton2> c = new Callable<Singleton2>() {
             @Override
             public Singleton2 call() throws Exception {
                 return Singleton2.getInstance();

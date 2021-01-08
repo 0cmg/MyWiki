@@ -7,10 +7,11 @@ package com.cmg.javabase.override;
  * @Description TODO
  **/
 public class Test {
-    private void test(){
+    private void test() {
         System.out.println("父类的private方法！");
     }
-    public void test2(){
+
+    public void test2() {
         System.out.println("父类的publi方法！");
     }
 }

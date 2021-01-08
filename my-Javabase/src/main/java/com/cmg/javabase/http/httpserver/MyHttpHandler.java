@@ -33,6 +33,7 @@ public class MyHttpHandler implements HttpHandler {
 
     /**
      * 获取请求头
+     *
      * @param httpExchange
      * @return
      */
@@ -45,6 +46,7 @@ public class MyHttpHandler implements HttpHandler {
 
     /**
      * 获取请求参数
+     *
      * @param httpExchange
      * @return
      * @throws Exception
@@ -71,6 +73,7 @@ public class MyHttpHandler implements HttpHandler {
 
     /**
      * 处理响应
+     *
      * @param httpExchange
      * @param responsetext
      * @throws Exception

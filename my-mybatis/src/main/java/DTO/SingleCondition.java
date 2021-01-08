@@ -11,7 +11,7 @@ public class SingleCondition {
      */
     public String CommandCode;
 
-    public SingleCondition(String transNo, String commandCode){
+    public SingleCondition(String transNo, String commandCode) {
         TransNo = transNo;
         CommandCode = commandCode;
     }

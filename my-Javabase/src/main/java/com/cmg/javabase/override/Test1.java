@@ -6,7 +6,7 @@ package com.cmg.javabase.override;
  * @date 2020/8/2 8:08
  * @Description TODO
  **/
-public class Test1 extends Test{
+public class Test1 extends Test {
     @Override
     public void test2() {
         super.test2();

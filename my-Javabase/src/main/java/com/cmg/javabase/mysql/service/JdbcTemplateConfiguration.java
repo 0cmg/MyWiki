@@ -31,7 +31,7 @@ public class JdbcTemplateConfiguration {
     private String jdbcPassWord;
 
     @Bean
-    public DataSource dataSource(){
+    public DataSource dataSource() {
         DruidDataSource druidDataSource = new DruidDataSource();
         druidDataSource.setDriverClassName(jdbcDriverClassName);
         druidDataSource.setUrl(jdbcUrl);
@@ -41,7 +41,7 @@ public class JdbcTemplateConfiguration {
     }
 
     @Bean
-    public JdbcTemplate jdbcTemplate(DataSource dataSource){
+    public JdbcTemplate jdbcTemplate(DataSource dataSource) {
         JdbcTemplate jdbcTemplate = new JdbcTemplate();
         jdbcTemplate.setDataSource(dataSource);
         return jdbcTemplate;

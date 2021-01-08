@@ -10,15 +10,15 @@ import com.rabbitmq.client.ConnectionFactory;
  */
 public class ConnectionUtil {
     /**
+     * @throws
      * @Name ConnectionUtil.getConnection
      * @Author cmg
      * @Params
      * @Return {@link Connection}
-     * @throws
      * @date 2020/6/28 21:50
      * Description TODO
      **/
-    public static Connection getConnection() throws Exception{
+    public static Connection getConnection() throws Exception {
 
         //定义连接工厂
         ConnectionFactory factory = new ConnectionFactory();

@@ -15,18 +15,18 @@ public class Recv2 {
     private final static String QUEUE_NAME = "test_queue_direct_2";
     private final static String EXCHANGE_NAME = "test_exchange_direct";
 
-    public static void main(String[] args) throws Exception{
+    public static void main(String[] args) throws Exception {
         //获取到连接以及MQ通道
         Connection connection = ConnectionUtil.getConnection();
         Channel channel = connection.createChannel();
 
         //声明队列
-        channel.queueDeclare(QUEUE_NAME,false,false,false,null);
+        channel.queueDeclare(QUEUE_NAME, false, false, false, null);
 
         //绑定队列到交换机
-        channel.queueBind(QUEUE_NAME,EXCHANGE_NAME,"insert");
-        channel.queueBind(QUEUE_NAME,EXCHANGE_NAME,"update");
-        channel.queueBind(QUEUE_NAME,EXCHANGE_NAME,"delete");
+        channel.queueBind(QUEUE_NAME, EXCHANGE_NAME, "insert");
+        channel.queueBind(QUEUE_NAME, EXCHANGE_NAME, "update");
+        channel.queueBind(QUEUE_NAME, EXCHANGE_NAME, "delete");
 
         //同一时刻服务器只会发一条消息给消费者
         channel.basicQos(1);

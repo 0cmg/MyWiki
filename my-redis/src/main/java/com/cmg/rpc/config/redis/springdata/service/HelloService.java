@@ -9,8 +9,9 @@ import org.springframework.stereotype.Service;
 public class HelloService {
     @Autowired
     HelloDao helloDao;
+
     public void set(String key, String value) {
-        helloDao.set(key,value);
+        helloDao.set(key, value);
     }
 
     public String get(String key) {

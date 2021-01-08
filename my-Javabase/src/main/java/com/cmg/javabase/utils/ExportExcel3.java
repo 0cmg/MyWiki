@@ -18,11 +18,11 @@ public class ExportExcel3 {
         String destFileName = "c:\\file\\开发文档\\上海农商行\\打印\\out3.xlsx";
 
         File file = new File(destFileName);
-        if(file.exists()){
+        if (file.exists()) {
             file.delete();
         }
 
-        Map<String, String> beans = new HashMap<String,String>();
+        Map<String, String> beans = new HashMap<String, String>();
 
         beans.put("name", "name");
         beans.put("sex", "sex");

@@ -15,7 +15,7 @@ public class Recv {
     private final static String QUEUE_NAME = "test_queue_work1";
     private final static String EXCHANGE_NAME = "test_exchange_fanout";
 
-    public static void main(String[] args) throws Exception{
+    public static void main(String[] args) throws Exception {
         //获取到连接及MQ通道
         Connection connection = ConnectionUtil.getConnection();
         Channel channel = connection.createChannel();

@@ -17,48 +17,49 @@ public class ExportExcel {
         String templateFileName = "c:\\file\\开发文档\\徽商银行\\导出\\temp3.xlsx";
         String destFileName = "c:\\file\\开发文档\\徽商银行\\导出\\out3.xlsx";
         File file = new File(destFileName);
-        if(file.exists()){
+        if (file.exists()) {
             file.delete();
         }
-        List<Map<String,Object>> list = prepareData();
-        Map<String, Object> beans = new HashMap<String,Object>();
+        List<Map<String, Object>> list = prepareData();
+        Map<String, Object> beans = new HashMap<String, Object>();
         beans.put("list", list);
-        exportExcelTemplate(templateFileName,beans,destFileName);
+        exportExcelTemplate(templateFileName, beans, destFileName);
     }
+
     /**
-     * @Description:模版导出excel
      * @param templateFile
      * @param beans
      * @param destFile
+     * @Description:模版导出excel
      * @return: void
      * @Author: cmg
      * @Date: 2020/9/26 9:49
      */
-    public static void exportExcelTemplate(String templateFile, Map<String, Object> beans, String destFile ) throws IOException, InvalidFormatException {
+    public static void exportExcelTemplate(String templateFile, Map<String, Object> beans, String destFile) throws IOException, InvalidFormatException {
         XLSTransformer transformer = new XLSTransformer();
         transformer.transformXLS(templateFile, beans, destFile);
     }
 
     /**
-     * @Description:准备数据
      * @param
-     * @return: java.util.List<java.util.Map<java.lang.String,java.lang.Object>>
+     * @Description:准备数据
+     * @return: java.util.List<java.util.Map < java.lang.String, java.lang.Object>>
      * @Author: cmg
      * @Date: 2020/9/26 9:48
      */
-    public static List<Map<String,Object>> prepareData(){
-        List<Map<String,Object>> list = new ArrayList<Map<String,Object>>();
-        Map<String, Object> params = new HashMap<String,Object>();
+    public static List<Map<String, Object>> prepareData() {
+        List<Map<String, Object>> list = new ArrayList<Map<String, Object>>();
+        Map<String, Object> params = new HashMap<String, Object>();
         params.put("name", "11");
         params.put("sex", "11");
         params.put("age", "11");
         list.add(params);
-        params = new HashMap<String,Object>();
+        params = new HashMap<String, Object>();
         params.put("name", "22");
         params.put("sex", "22");
         params.put("age", "22");
         list.add(params);
-        params = new HashMap<String,Object>();
+        params = new HashMap<String, Object>();
         params.put("name", "33");
         params.put("sex", "33");
         params.put("age", "33");

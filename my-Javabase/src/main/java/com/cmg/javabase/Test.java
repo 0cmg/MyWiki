@@ -15,13 +15,16 @@ public class Test {
 //        System.out.println(list.size());
 //        list.add(1, "1");
 //        System.out.println(list.get(0));
-        Cal cl = (int a, int b) -> {return a+b;};
+        Cal cl = (int a, int b) -> {
+            return a + b;
+        };
         int c = cl.add(1, 2);
         System.out.println(c);
 
 
     }
 }
-interface Cal{
+
+interface Cal {
     int add(int a, int b);
 }

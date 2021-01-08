@@ -10,11 +10,11 @@ package com.cmg.javabase.classinit;
 
 /**
  * 子类的初始化<clinit>:
- *  * (1.)j=method();
- *  * (2.)子类的静态代码块
+ * * (1.)j=method();
+ * * (2.)子类的静态代码块
  * 先初始化父类：（5）（1）
  * 初始化子类：（10）（5）
- *
+ * <p>
  * 子类的实例化方法：
  * （1）super()方法 (9)(3)(2)
  * （2）i=test(); (9)
@@ -28,18 +28,21 @@ public class Son extends Father {
     static {
         System.out.print("(6)");
     }
-    Son(){
+
+    Son() {
         System.out.print("(7)");
     }
+
     {
         System.out.print("(8)");
     }
-    public int test(){
+
+    public int test() {
         System.out.print("(9)");
         return 1;
     }
 
-    public static int method(){
+    public static int method() {
         System.out.print("(10)");
         return 1;
     }

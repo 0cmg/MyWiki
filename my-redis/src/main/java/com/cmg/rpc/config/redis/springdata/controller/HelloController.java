@@ -34,7 +34,7 @@ public class HelloController {
         helloService.setuser(user);
     }
 
-    @RequestMapping(value = "/getuser",produces = "text/html;charset=UTF-8")
+    @RequestMapping(value = "/getuser", produces = "text/html;charset=UTF-8")
     @ResponseBody
     public String getUser() {
         return helloService.getuser("1");

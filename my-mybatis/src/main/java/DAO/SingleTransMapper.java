@@ -8,10 +8,16 @@ import java.util.HashMap;
 
 public interface SingleTransMapper {
     SingletransDTO selectSingle(String transNo);
+
     SingletransDTO selectSingleByClass(SingleCondition singleCondition);
-    SingletransDTO selectSingleByMultCondition(HashMap<String,Object> param);
-    SingletransDTO selectSingleByParam(@Param("param1")String transNo, @Param("param2") String commandCode);
+
+    SingletransDTO selectSingleByMultCondition(HashMap<String, Object> param);
+
+    SingletransDTO selectSingleByParam(@Param("param1") String transNo, @Param("param2") String commandCode);
+
     int insert(SingletransDTO singletransDTO);
+
     int update(SingletransDTO singletransDTO);
-    int delete(@Param("TransNo")String transNo, @Param("CommandCode") String commandCode);
+
+    int delete(@Param("TransNo") String transNo, @Param("CommandCode") String commandCode);
 }
