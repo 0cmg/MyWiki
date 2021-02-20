@@ -98,12 +98,12 @@ public class FTPTools {
 
     public static void main(String[] args) {
         //ftp配置信息
-        String hostname = "10.243.140.215"; //域名地址
+        String hostname = "10.243.141.53"; //域名地址
         int port = 22; //端口号
         String username = "gpweb"; //用户名
         String password = "gpweb"; //密码
         String fileInfo = "c:\\file\\temp\\LK2070161B1.json"; //待上传的文件目录
-        String uploadPath = "/"; //待上传到的路径
+        String uploadPath = "/gphome/gpweb"; //待上传到的路径
         String saveName = "20210209150229001"; //预保存的文件名
         FTPTools.upload(hostname, port, username, password, fileInfo, uploadPath, saveName);
     }
