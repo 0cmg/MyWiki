@@ -1,4 +1,4 @@
-package com.cmg.javabase.singleton.lazy;
+package com.cmg.javabase.atguigu.singleton.hungry;
 
 import java.io.IOException;
 import java.util.Properties;
