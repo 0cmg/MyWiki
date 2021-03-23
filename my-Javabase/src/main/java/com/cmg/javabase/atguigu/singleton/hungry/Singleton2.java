@@ -1,4 +1,4 @@
-package com.cmg.javabase.singleton.lazy;
+package com.cmg.javabase.atguigu.singleton.hungry;
 
 /**
  * @Name MyWiKi com.cmg.javabase

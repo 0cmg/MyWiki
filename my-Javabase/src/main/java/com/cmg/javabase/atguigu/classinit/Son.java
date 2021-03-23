@@ -1,4 +1,4 @@
-package com.cmg.javabase.classinit;
+package com.cmg.javabase.atguigu.classinit;
 
 
 /**

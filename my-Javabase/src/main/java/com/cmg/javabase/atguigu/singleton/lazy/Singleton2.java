@@ -1,4 +1,4 @@
-package com.cmg.javabase.singleton.hungry;
+package com.cmg.javabase.atguigu.singleton.lazy;
 
 /**
  * @Name MyWiKi com.cmg.javabase
@@ -23,14 +23,16 @@ public class Singleton2 {
     }
 
     public static Singleton2 getInstance() {
-        synchronized (Singleton2.class) {
-            if (instance == null) {
-                try {
-                    Thread.sleep(1000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
+        if(instance == null){
+            synchronized (Singleton2.class) {
+                if (instance == null) {
+                    try {
+                        Thread.sleep(1000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    instance = new Singleton2();
                 }
-                instance = new Singleton2();
             }
         }
         return instance;
