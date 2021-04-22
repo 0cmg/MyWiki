@@ -21,7 +21,7 @@ sudo docker run --name oracle11g -p 1521:1521 -d registry.cn-hangzhou.aliyuncs.c
 ```
 这里说一下，命令后面的地址一定要是你下载的镜像地址也就是你拉取镜像名字，否则会出现名字已存在等问题！  
 如果创建成功能会返回容器id
-##### ③、启动容器 
+##### ③、启动容器 
 <!-- ![例图(2)](../../images/Docker/Oracle/Docker安装Oracle11g(2).png) -->  
 ![例图(2)](https://s1.ax1x.com/2020/05/22/YLYPDs.png)     
 ##### ④、进入镜像进行配置
@@ -60,7 +60,7 @@ export PATH=$ORACLE_HOME/bin:$PATH
 ln -s $ORACLE_HOME/bin/sqlplus /usr/bin
 ```
 + 6、切换到oracle 用户
-这里还要说一下，一定要写中间的内条 -   必须要，否则软连接无效    
+这里还要说一下，一定要写中间的内条 -   必须要，否则软连接无效    
 <!-- ![例图(8)](../../images/Docker/Oracle/Docker安装Oracle11g(8).png) -->
 ![例图(8)](https://s1.ax1x.com/2020/05/22/YLYkEq.png)      
 ##### ⑤ 、登录sqlplus并修改sys、system用户密码
@@ -80,18 +80,18 @@ alter user sys identified by sys;
 当执行修改密码的时候出现 ：database not open
 提示数据库没有打开，不急按如下操作
 输入：alter database open;
-注意了：这里也许还会提示  ：   ORA-01507: database not mounted
+注意了：这里也许还会提示  ：   ORA-01507: database not mounted
 不急！继续！
 ```
 <!-- ![例图(10)](../../images/Docker/Oracle/Docker安装Oracle11g(10).png) -->
 ![例图(10)](https://s1.ax1x.com/2020/05/22/YLYe8U.png)    
-========== 解决方法=========== 
+========== 解决方法=========== 
 ```sql
-输入：alter database mount;
-输入 ：alter database open;
+输入：alter database mount;
+输入 ：alter database open;
 然后就可执行 修改数据库密码的命令了
 改完之后输入：ALTER PROFILE DEFAULT LIMIT PASSWORD_LIFE_TIME UNLIMITED;
-刷新下表 
+刷新下表 
 exit
 ```
 <!-- ![例图(11)](../../images/Docker/Oracle/Docker安装Oracle11g(11).png) -->  
@@ -100,8 +100,8 @@ exit
 ![例图(12)](https://s1.ax1x.com/2020/05/22/YLYm2F.png)  
 ##### ⑥、使用pl/sql 进行连接 第7步是navicat连接的在最后
 &emsp;&emsp;之前我们把端口映射到了1521上，所以我们需要进行配置tnsnames.ora
-几个朋友不知道ora文件在哪，所以添加了这一步     
-pl/sql 安装包，汉化包，秘钥工具     
+几个朋友不知道ora文件在哪，所以添加了这一步     
+pl/sql 安装包，汉化包，秘钥工具     
 https://download.csdn.net/download/qq_38380025/11168289  
 plsql安装配置工具包    
 https://blog.csdn.net/qq_38380025/article/details/89677588
@@ -124,7 +124,7 @@ docker_oracle11 =(
 这时我们需要去看一下oracle 的 lsnrctl 服务  
 <!-- ![例图(15)](../../images/Docker/Oracle/Docker安装Oracle11g(15).png) -->   
 ![例图(15)](https://s1.ax1x.com/2020/05/22/YLYnv4.png)  
-看到这两个了么，任选其一，修改 tnsnames.ora的 service_name=helowinXDB
+看到这两个了么，任选其一，修改 tnsnames.ora的 service_name=helowinXDB
 ```ini
 docker_oracle11 =(
     DESCRIPTION =

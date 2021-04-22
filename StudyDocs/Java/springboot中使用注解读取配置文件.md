@@ -50,10 +50,10 @@ my.name=j......u
 gitlab.gitLabUrl=http://10.10.10.101  
 gitlab.serverIP = 10.10.10.101  
 gitlab.passWord=z......2017  
-gitlab.adminToken=iJ......BV72y`  
+gitlab.adminToken=iJ......BV72y```  
 
 
-`package com.icerno.spring.utils;  
+```package com.icerno.spring.utils;  
  
 import org.springframework.beans.factory.annotation.Value;  
 import org.springframework.context.annotation.Configuration;  
