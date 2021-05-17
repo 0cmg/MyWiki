@@ -6,18 +6,18 @@
 ## 2.拉取 MySQL 镜像
 >这里我们拉取官方的最新版本的镜像：
 ```bash
-docker pull mysql:latest
+sudo docker pull mysql:latest
 ```
 ## 3.查看本地镜像
 >使用以下命令来查看是否已安装了 mysql：
 ```bash
-docker images
+sudo docker images
 ```
 
 ## 4.运行容器
 >安装完成后，我们可以使用以下命令来运行 mysql 容器：  
 ```bash
-docker run -itd --name mysql-test -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123456 mysql  
+sudo docker run -itd --name mysql-test -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123456 mysql  
 ```
 
 参数说明：  
@@ -31,15 +31,15 @@ docker run -itd --name mysql-test -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123456 mys
 备注：
 + docker 中下载 mysql
 ```bash  
-docker pull mysql
+sudo docker pull mysql
 ```
 + 启动 
 ```bash
-docker run --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=Lzslov123! -d mysql
+sudo docker run --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=Lzslov123! -d mysql
 ```
 + 进入容器
 ```bash
-docker exec -it mysql bash
+sudo docker exec -it mysql bash
 ```
 + 登录mysql
 ```sql
